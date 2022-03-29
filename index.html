@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Objects</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header-text">
+            <h1>Library</h1>
+        </div>
+        
+        <div class="book-container" id="card-container-id">
+            <h2 class="book-titles">Your books</h2>
+            <div class="addbutton-container">
+                <button id="addBtn">Add book</button>
+            </div>
+        <!-- this is where new cards will be placed after entered through the alerts  -->
+        
+        </div>
+        <dialog class="modal" id="modal">
+            <h2>Add your book!</h2>
+            <form class="modal-form" id="modal-form" method="dialog">
+                        <div>
+                            <label for="title">Book Title:</label>
+                            <input type="text" name="title" id="title">
+                        </div>
+                        <div>
+                            <label for="author">Author:</label>
+                            <input type="text" name="author" id="author">
+                        </div>
+                        <div>
+                            <label for="pages">Pages:</label>
+                            <input type="number" name="pages" id="pages" min="1" max="99999">
+                        </div>
+                        <div>
+                            Have you read this book?
+                                <div>
+                                    <label for="yes">Yes</label>
+                                    <input type="radio" name="read" id="yes" value="read">
+                                    
+                                </div>
+                                <div>
+                                    <label for="no">No</label>
+                                    <input type="radio" name="read" id="no" value="notread">
+                                </div>
+                        </div>    
+                        <div class="button-container">
+                            <button type="submit" id="submit">Add</button>
+                            <button type="reset">Reset</button>
+                            <button id="closebtn">Exit</button>
+                        </div>
+                        
+                    </form>
+
+        </dialog>
+
+
+        
+    </div>
+</body>
+</html>
