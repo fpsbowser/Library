@@ -1,14 +1,22 @@
 // Refactor to class
-
-function Book(title, author, pages, read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
+class Book {
+    constructor(title, author, pages) {
+        this.title = title
+        this.author = author
+        this.pages = pages
+    }
 }
 
-let i = 0;
+// function Book(title, author, pages, read) {
+//     this.title = title
+//     this.author = author
+//     this.pages = pages
+//     this.read = read
+// }
+
 const book = new Book('The Hobbit', 'J.R.R. Tolkien', '295', 'read')
+
+let i = 0;
 let myLibrary = [book];
 let bookTitles = ['thehobbit'];
 loopArray(book.title, book.author, book.pages, book.read);
@@ -45,15 +53,15 @@ closeButton.addEventListener('click', () => {
 
 // Function that loops through the myLibrary array and displays each book on the webpage.
 
-function loopArray(arg1, arg2, arg3, arg4) {
+function loopArray(arg1, arg2, arg3) {
     for (i; i < myLibrary.length; i++) {
-        addCard(arg1, arg2, arg3, arg4)
+        addCard(arg1, arg2, arg3)
     }
 }
 
 // Function that creates Element and applies style to it
 
-function addCard(cardtitle, cardauthor, cardpages, cardread) {
+function addCard(cardtitle, cardauthor, cardpages) {
     const currentDiv = document.getElementById('card-container-id')
     const newCard = document.createElement('div');
     newCard.className = 'card';
