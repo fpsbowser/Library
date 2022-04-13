@@ -1,3 +1,5 @@
+// Refactor to class
+
 function Book(title, author, pages, read) {
     this.title = title
     this.author = author
